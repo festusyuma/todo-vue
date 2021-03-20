@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <h1>Todos</h1>
       <Todos :todos=todos />
   </div>
 </template>
