@@ -21,23 +21,7 @@ export default {
     },
     data() {
         return {
-            todos: [
-                {
-                    id: 1,
-                    title: 'one',
-                    completed: false
-                },
-                {
-                    id: 2,
-                    title: 'two',
-                    completed: true
-                },
-                {
-                    id: 3,
-                    title: 'three',
-                    completed: false
-                }
-            ]
+            todos: []
         }
     },
     methods: {
