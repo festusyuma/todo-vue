@@ -1,27 +1,48 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to My Vue.js App"/>
+      <p>Hello world</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
+  },
+  data() {
+      return {
+          todos: [
+              {
+                  id: 1,
+                  title: 'one',
+                  completed: false
+              },
+              {
+                  id: 2,
+                  title: 'two',
+                  completed: true
+              },
+              {
+                  id: 3,
+                  title: 'three',
+                  completed: false
+              }
+          ]
+      }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
 }
 </style>
