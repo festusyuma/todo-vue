@@ -1,6 +1,10 @@
 <template>
     <div class="todo-item" :class="{ 'is-complete': todo.completed }" >
-        <p>Todo item: {{todo.title}}</p>
+        <p>
+            <input type="checkbox" @change="markComplete" title="todo-check" >
+            Todo item: {{todo.title}}
+            <button class="del" @click="$emit('del-todo', todo.id)"  >x</button>
+        </p>
     </div>
 </template>
 
@@ -9,7 +13,12 @@ export default {
     name: "TodoItem",
     props: [
         "todo"
-    ]
+    ],
+    methods: {
+        markComplete() {
+            this.todo.completed = !this.todo.completed
+        },
+    }
 }
 </script>
 
